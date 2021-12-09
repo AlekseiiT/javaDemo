@@ -17,4 +17,11 @@ public class PersonTest {
         assertEquals("Hello Marcus", person.hello("Marcus"));
     }
 
+    @Test
+    public void numberOfPersons(){
+        Person person1 = new Person();
+        Person person2 = new Person();
+        assertEquals(2, Person.numberOfPersons());
+    }
+
 }

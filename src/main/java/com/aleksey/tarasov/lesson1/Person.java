@@ -5,12 +5,14 @@ import com.aleksey.tarasov.lesson2.Name;
 public class Person {
 
     private Name personName;
+    private static int personCounter;
 
     public Person(Name personName) {
         this.personName = personName;
     }
 
     public Person(){
+        personCounter++;
         /*
          Empty on purpose
          */
@@ -22,5 +24,9 @@ public class Person {
 
     public String hello(String name){
         return "Hello " + name;
+    }
+
+    public static int numberOfPersons() {
+        return personCounter;
     }
 }
